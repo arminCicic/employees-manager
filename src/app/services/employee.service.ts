@@ -13,4 +13,12 @@ export class EmployeeService {
     return this._http.post("http://localhost:3000/employees", data)
   }
 
+  getEmployeeList(): Observable<any> {
+    return this._http.get("http://localhost:3000/employees")
+  }
+
+  deleteEmployeeList(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/employees/${id}`)
+  }
+
 }
