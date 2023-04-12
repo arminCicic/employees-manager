@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "dsada",
+      "lastName": "dsada",
+      "email": "armincicic@gmail.com",
+      "dob": "2023-04-01T22:00:00.000Z",
+      "gender": "male",
+      "education": "Intermediate",
+      "company": "dsdadsd",
+      "experience": 2,
+      "package": 12,
+      "id": 1
+    }
+  ]
+}
