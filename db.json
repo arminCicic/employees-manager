@@ -18,16 +18,28 @@
   },
   "employees": [
     {
-      "firstName": "dsada",
+      "firstName": "ssaS",
+      "lastName": "saSAs",
+      "email": "armincicic@gmail.com",
+      "dob": "2023-03-31T22:00:00.000Z",
+      "gender": "female",
+      "education": "Diploma",
+      "company": "saS",
+      "experience": 3,
+      "package": 4,
+      "id": 2
+    },
+    {
+      "firstName": "dsda",
       "lastName": "dsada",
       "email": "armincicic@gmail.com",
-      "dob": "2023-04-01T22:00:00.000Z",
+      "dob": "2023-03-31T22:00:00.000Z",
       "gender": "male",
-      "education": "Intermediate",
-      "company": "dsdadsd",
-      "experience": 2,
-      "package": 12,
-      "id": 1
+      "education": "Diploma",
+      "company": "dsdads",
+      "experience": 3,
+      "package": 3,
+      "id": 3
     }
   ]
 }
