@@ -1,27 +1,30 @@
-# EmployeesManagament
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
-## Development server
+This project was generated with [Angular CLI] version 15.2.5.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Employee Management App**
 
-## Code scaffolding
+Welcome to the Employee Management App, a fullstack web application built with Angular on the front-end and .NET6 and Entity Framework Core on the back-end. This app is designed to  manage  employees efficiently by allowing  user to create, update, and delete employee information. The app uses a SQL database to store employee data, which enables it to perform CRUD (Create, Read, Update, Delete) operations seamlessly.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Features
+Angular Material UI: The app uses the Angular Material UI library to provide a clean and modern user interface.
+Reactive Forms with Validations: The app uses Angular's Reactive Forms feature, which provides a more flexible and powerful way to manage form data. The forms are also validated to ensure data accuracy.
+SQL Database: The app uses a SQL database to store employee data. Entity Framework Core is used to manage database operations.
+CRUD Operations: The app allows you to easily create, read, update, and delete employee information.
 
-## Build
+Installation
+To run the app locally, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone the repository: git clone https://github.com/arminCicic/employees-manager.git
+Navigate to the project directory: cd employee-management-app
+Install dependencies: npm install
+Start the app: ng serve
+The app should now be running on http://localhost:4200/.
 
-## Running unit tests
+Technologies Used
+**Angular   **Angular Material UI   **.NET6   **Entity Framework Core   **SQL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Contributing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contributions to the Employee Management App are always welcome. If you find a bug or have a feature request, please create an issue on the repository. If you'd like to contribute code, please fork the repository and create a pull request.
