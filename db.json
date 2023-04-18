@@ -28,6 +28,18 @@
       "experience": 2,
       "package": 3,
       "id": 1
+    },
+    {
+      "firstName": "dsada",
+      "lastName": "dasda",
+      "email": "armincicic@gmail.com",
+      "dob": "2023-04-04T22:00:00.000Z",
+      "gender": "male",
+      "education": "Matric",
+      "company": "dsa",
+      "experience": 4,
+      "package": 4,
+      "id": 2
     }
   ]
 }

@@ -21,13 +21,12 @@ export class AppComponent implements OnInit {
     'firstName', 
     'lastName', 
     'email', 
-    'dob',
+    'doB',
     'gender', 
     'education', 
     'company', 
     'experience', 
-    'package',
-    'action'
+     'action'
     ];
   dataSource!: MatTableDataSource<any>;
 
@@ -87,8 +86,9 @@ export class AppComponent implements OnInit {
   })
  }
 
- openEditForm(data:any) {
+ openEditForm(data:any, id:any) {
  const dialogRef = this.dialog.open(AddEditComponent, {
+    id: id,
     data: data,
 
   });

@@ -40,9 +40,9 @@
         <td mat-cell *matCellDef="let row"> {{row.email}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="dob">
+      <ng-container matColumnDef="doB">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> dob </th>
-        <td mat-cell *matCellDef="let row"> {{row.dob | date}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.doB | date}}</td>
       </ng-container>
 
       <ng-container matColumnDef="gender">
@@ -64,16 +64,11 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Exp. </th>
         <td mat-cell *matCellDef="let row"> {{row.experience}}</td>
       </ng-container>
-
-      <ng-container matColumnDef="package">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Package </th>
-        <td mat-cell *matCellDef="let row"> {{row.package | currency:'EUR'}}</td>
-      </ng-container>
-
+     
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary" (click)="openEditForm(row)">
+          <button mat-icon-button color="primary" (click)="openEditForm(row, row.id)">
             <mat-icon>edit</mat-icon>
           </button>
           <button mat-icon-button color="warn" (click)="deleteEpmloyee(row.id)">

@@ -28,15 +28,16 @@ export class AddEditComponent implements OnInit{
               @Inject(MAT_DIALOG_DATA) public data: any,
               private coreService: CoreService) {
       this.form = this.fb.group({
+      id: "",
       firstName: "",
       lastName: "",
       email: "",
-      dob: "",
+      doB: "",
       gender:"",
       education:"",
       company: "",
       experience: "",
-      package:"",
+     
 
     })
   }
@@ -48,13 +49,16 @@ export class AddEditComponent implements OnInit{
   onFormSubmit () {
     if (this.form.valid) {
       if (this.data) {
-        this.empService.updateEmployee(this.data.id, this.form.value).subscribe({
+        this.empService.updateEmployee(this.form.value).subscribe({
+         
           next: (val:any) => {
             this.coreService.openSnackBar("Employee information updated")
             this.dialogRef.close(true);
+           
           }, 
           error: (err:any) => {
             console.error(err)
+          
           }
   
         })
@@ -63,6 +67,7 @@ export class AddEditComponent implements OnInit{
           next: (val:any) => {
             this.coreService.openSnackBar("Employee added")
             this.dialogRef.close(true);
+            console.log(this.form.value)
           }, 
           error: (err:any) => {
             console.error(err)
