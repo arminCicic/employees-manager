@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
@@ -27,23 +27,39 @@ export class AddEditComponent implements OnInit{
               private dialogRef: MatDialogRef<AddEditComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
               private coreService: CoreService) {
-      this.form = this.fb.group({
-      id: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      doB: "",
-      gender:"",
-      education:"",
-      company: "",
-      experience: "",
-     
+        this.form = this.fb.group (
+          {
+            id: new FormControl(''),
+            firstName: new FormControl('', [Validators.required]),
+            lastName: new FormControl('', [Validators.required]),
+            email: new FormControl('', [Validators.required, Validators.email]),
+            doB: new FormControl('', [Validators.required, this.dateOfBirthValidator]),
+            gender:new FormControl('', [Validators.required]),
+            education:new FormControl('', [Validators.required]),
+            company: new FormControl('', [Validators.required]),
+            experience: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+          }
+          )
+              }
 
-    })
-  }
+              dateOfBirthValidator(control: AbstractControl): { [key: string]: any } | null {
+                const selectedDate = new Date(control.value);
+                const currentDate = new Date();
+            
+                if (selectedDate.getTime() > currentDate.getTime()) {
+                  return { 'futureDate': true };
+                }
+                return null;
+              }
+
+
+  // initializeForm() {
+    
+  // }
 
   ngOnInit(): void {
     this.form.patchValue(this.data)
+    // this.initializeForm();
   }
 
   onFormSubmit () {

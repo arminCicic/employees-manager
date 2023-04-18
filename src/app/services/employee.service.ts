@@ -10,7 +10,7 @@ export class EmployeeService {
   constructor(private _http:HttpClient) { }
 
   public addEmployee(data: any): Observable<any> {
-    // data.id = undefined;
+    data.id = undefined;
     return this._http.post("https://localhost:7054/api/EmployeesManager", data)
   }
 
